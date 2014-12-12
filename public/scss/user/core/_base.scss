@@ -13,6 +13,7 @@
 
 body {
 	font-size: 14px;
+	line-height: 20px;
 	background-color: $bg;
 	color: white;
 	font-family: 'Roboto';
@@ -28,9 +29,15 @@ body {
 	width: $min_width;
 	padding: 0 30px;
 	height: 100%;
+	position: relative;
+}
+
+.modules {
+	overflow: hidden;
 }
 
 .module {
+	position: relative;
 	display: none;
 	
 	&.active {
@@ -44,10 +51,13 @@ body {
 	
 	.labels {
 		height: 100px;
+		
+		.adorable_cell {
+			white-space: nowrap;
+		}
 	}
 	
 	.title_container {
-		@include middle_inline_block;
 		width: 475px;
 		
 		.topper_title {
@@ -70,7 +80,6 @@ body {
 	}
 	
 	.phone_container {
-		@include middle_inline_block;
 		width: 445px;
 		
 		.skype {
@@ -82,16 +91,51 @@ body {
 			background: url('/img/user/skype.png') no-repeat center;
 			background-color: #46caf4;
 		}
+		
+		.text {
+			@include middle_inline_block;
+			font-weight: bold;
+			color: $bluetitle;
+			margin-left: 9px;
+			line-height: 18px;
+		}
 	}
 	
 	.buttons_container {
-		@include middle_inline_block;
 		width: 190px;
+		
+		.login {
+			border: 1px solid $bluetitle;
+			width: 70px;
+			color: $bluetitle;
+			font-size: 13px;
+			font-weight: 500;
+			float: left;
+		}
+		
+		.register {
+			width: 110px;
+			background-color: $bluetitle;
+			font-size: 12px;
+			float: right;
+		}
 	}
 	
 	.menu {
 		height: 40px;
 		background-color: $blue;
+		
+		.adorable_table {
+			table-layout: fixed;
+		}
+		
+		.menu_item {
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+			font-family: 'Tahoma';
+			text-transform: uppercase;
+		}
 	}
 }
 
@@ -101,15 +145,78 @@ body {
 	
 	.menu {
 		height: 130px;
+		
+		.adorable_cell {
+			white-space: nowrap;
+		}
+		
+		.title_container {
+			width: 285px;
+			font-size: 40px;
+			color: $orange;
+			font-family: 'Roboto Condensed';
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-left: -2px;
+			height: 100%;
+		}
+		
+		.menu_container {
+			width: 760px;
+			height: 100%;
+			margin-left: 65px;
+		}
+		
+		.menu_item {
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+			text-transform: uppercase;
+			color: $grey;
+		}
 	}
 	
 	.contacts {
 		background-color: $blue;
 		height: 140px;
+		letter-spacing: -0.3px;
+		
+		.adorable_cell {
+			white-space: nowrap;
+			padding: 0 0 10px;
+		}
+		
+		.text_container {
+			@include middle_inline_block;
+			width: 730px;
+			white-space: normal;
+		}
+		
+		.labels_container {
+			width: 95px;
+			margin-left: 95px;
+		}
+		
+		.info_container {
+			width: 190px;
+			white-space: normal;
+			margin-top: 20px;
+		}
 	}
 	
 	.copyright {
 		background-color: $darkblue;
 		height: 90px;
+		
+		.visa {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 30px;
+			margin: auto;
+			width: 68px;
+			height: 48px;
+			background: url('/img/user/visa.png') no-repeat;
+		}
 	}
 }

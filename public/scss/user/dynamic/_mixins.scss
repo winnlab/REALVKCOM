@@ -41,8 +41,8 @@
 
 @mixin lovely {
 	content: "";
-		display: block;
-		margin-top: 100%;
+	display: block;
+	margin-top: 100%;
 }
 
 @mixin linear_gradient($val1, $val2, $val3) {
@@ -89,6 +89,11 @@
 @mixin middle_inline_block {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+@mixin bottom_inline_block {
+	display: inline-block;
+	vertical-align: bottom;
 }
 
 @mixin rounded {

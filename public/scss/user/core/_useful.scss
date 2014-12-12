@@ -63,6 +63,14 @@
 	&.left {
 		text-align: left;
 	}
+	
+	&.right {
+		text-align: right;
+	}
+	
+	&.bottom {
+		vertical-align: bottom;
+	}
 }
 
 .inline_container {
@@ -74,6 +82,14 @@
 		line-height: normal;
 		letter-spacing: normal;
 	}
+}
+
+.middle_inline_block {
+	@include middle_inline_block;
+}
+
+.bottom_inline_block {
+	@include bottom_inline_block;
 }
 
 .rounded {
