@@ -42,7 +42,6 @@ export default Controller.extend(
 		},
 		
 		set_page: function() {
-			console.log(this.page)
 			this.pages.removeClass(this.active);
 			this.pages.filter('.page_' + this.page).addClass(this.active);
 		}

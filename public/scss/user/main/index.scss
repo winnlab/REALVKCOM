@@ -77,13 +77,14 @@
 			.center_container {
 				height: 340px;
 				width: 1045px;
+				background-color: white;
 				
 				&:before {
 					@include pseudo;
 					width: 100%;
 					height: 100%;
 					z-index: 10;
-					background: url('/img/user/main/page_0_center_bg.png') right center no-repeat white;
+					background: url('/img/user/main/page_1_center_bg.png') right center no-repeat;
 					opacity: 0.1;
 					left: 0;
 					top: 0;
