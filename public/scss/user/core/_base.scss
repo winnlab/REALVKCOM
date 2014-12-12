@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import '_normalize';
+@import '../dynamic/_dynamic';
+
+@include font_face('Roboto', '/fonts/Roboto_Regular/Roboto_Regular');
+@include font_face('Roboto', '/fonts/Roboto_Medium/Roboto_Medium', 500);
+@include font_face('Roboto', '/fonts/Roboto_Bold/Roboto_Bold', bold);
+@include font_face('Roboto', '/fonts/Roboto_Bold_Italic/Roboto_Bold_Italic', bold, italic);
+
+@include font_face('Roboto Condensed', '/fonts/Roboto_Condensed_Bold/Roboto_Condensed_Bold', bold);
+
+@include font_face('Tahoma', '/fonts/Tahoma_Regular/Tahoma_Regular');
+
+body {
+	font-size: 14px;
+	background-color: $bg;
+	color: white;
+	font-family: 'Roboto';
+}
+
+.main_container {
+	min-width: $min_width;
+}
+
+.content {
+	@include border_boxed;
+	margin: 0 auto;
+	width: $min_width;
+	padding: 0 30px;
+	height: 100%;
+}
+
+.module {
+	display: none;
+	
+	&.active {
+		display: block;
+	}
+}
+
+.topper {
+	height: 140px;
+	background-color: white;
+	
+	.labels {
+		height: 100px;
+	}
+	
+	.title_container {
+		@include middle_inline_block;
+		width: 475px;
+		
+		.topper_title {
+			margin-top: 8px;
+			font-size: 50px;
+			line-height: 50px;
+			color: $orange;
+			font-family: 'Roboto Condensed';
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-left: -2px;
+		}
+		
+		.bottom_title {
+			font-size: 12px;
+			font-family: 'Tahoma';
+			text-transform: uppercase;
+			color: $bluetitle;
+		}
+	}
+	
+	.phone_container {
+		@include middle_inline_block;
+		width: 445px;
+		
+		.skype {
+			@include box_shadow(0px 1px 0px 0px rgba(56, 165, 199, 1));
+			@include border_radius(2px);
+			@include middle_inline_block;
+			width: 30px;
+			height: 30px;
+			background: url('/img/user/skype.png') no-repeat center;
+			background-color: #46caf4;
+		}
+	}
+	
+	.buttons_container {
+		@include middle_inline_block;
+		width: 190px;
+	}
+	
+	.menu {
+		height: 40px;
+		background-color: $blue;
+	}
+}
+
+.footer {
+	height: 360px;
+	background-color: white;
+	
+	.menu {
+		height: 130px;
+	}
+	
+	.contacts {
+		background-color: $blue;
+		height: 140px;
+	}
+	
+	.copyright {
+		background-color: $darkblue;
+		height: 90px;
+	}
+}
