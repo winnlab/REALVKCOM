@@ -45,6 +45,20 @@ body {
 	}
 }
 
+.module_preload {
+	background-color: $bg;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+	
+	img {
+		@include absolute_centered;
+	}
+}
+
 .topper {
 	height: 140px;
 	background-color: white;

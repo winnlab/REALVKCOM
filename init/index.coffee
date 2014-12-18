@@ -10,7 +10,7 @@ Application = require './application'
 AuthStartegies = require './auth'
 ModelPreloader = require './mpload'
 
-port = 80
+port = 1337
 
 _.mixin _.str.exports()
 
@@ -26,8 +26,10 @@ async.waterfall [
 		Logger.log 'info', 'Models are preloaded'
 		
 		Logger.log 'info', 'Processing Migrate...'
+		console.time 'Info: Migration took'
 		Migrate.init next
 	(next) ->
+		console.timeEnd 'Info: Migration took'
 		Logger.log 'info', 'Migrate is initializated'
 		
 		Application.init port, next

@@ -15,6 +15,8 @@ export default can.Control.extend({
 		
 		this.server = server.length;
 		
+		this.module_preload = this.element.find('.module_preload');
+		
 		if(this.server) {
 			server.children().appendTo(this.element);
 			server.remove();
@@ -66,11 +68,11 @@ export default can.Control.extend({
 		if(data.err) {
 			return console.error(err);
 		}
-
+		
 		var html = jadeTemplate.get('user/' + this.options.name + '/content', data.data);
-
-		this.element.html(html);
-
+		
+		this.element.append(html);
+		
 		this.after_request(data.data);
 	},
 	
@@ -80,6 +82,8 @@ export default can.Control.extend({
 		this.sizes();
 		
 		this.after_init(data);
+		
+		this.module_preload.hide();
 		
 		if(this.server) {
 			$(window).trigger('custom_ready');
