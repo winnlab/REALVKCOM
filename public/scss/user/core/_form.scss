@@ -12,6 +12,7 @@ input, textarea, button {
 input, textarea {
 	width: 100%;
 	border: 1px solid #91a8c3;
+	outline-style: none;
 	
 	&.error {
 		border: 1px solid #fd7b6a;
@@ -20,7 +21,6 @@ input, textarea {
 
 input {
 	height: 30px;
-	outline-style: none;
 	padding: 0 10px;
 }
 
