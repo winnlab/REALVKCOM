@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import '_normalize';
 @import '../dynamic/_dynamic';
+@import '../../../js/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
 
 @include font_face('Roboto', '/fonts/Roboto_Regular/Roboto_Regular');
 @include font_face('Roboto', '/fonts/Roboto_Medium/Roboto_Medium', 500);
@@ -34,6 +35,7 @@ body {
 
 .modules {
 	overflow: hidden;
+	min-height: 690px;
 }
 
 .module {
@@ -79,6 +81,7 @@ body {
 			font-size: 50px;
 			line-height: 50px;
 			color: $orange;
+			/*color: $bluetitle;*/
 			font-family: 'Roboto Condensed';
 			font-weight: bold;
 			text-transform: uppercase;
@@ -149,6 +152,10 @@ body {
 			vertical-align: middle;
 			font-family: 'Tahoma';
 			text-transform: uppercase;
+			
+			&.active {
+				background-color: $darkbluebg;
+			}
 		}
 	}
 }

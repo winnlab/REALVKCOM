@@ -13,6 +13,7 @@ System.config({
 		// 'moment': 'js/plugins/moment/moment.js',
 		'router': 'js/app/user/router/router.js',
 		'placeholder': 'js/app/user/router/placeholder.js',
+		'scroller': 'js/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
 		
 		'core': 'js/app/user/core/core.js',
 		'core/*': 'js/app/user/core/*.js',

@@ -11,11 +11,14 @@ export default can.Control.extend({
 	init: function() {
 		this.bindings();
 		
+		this.window = $(window);
+		
 		var server = $('#modules').find('.module.server');
 		
 		this.server = server.length;
 		
 		this.module_preload = this.element.find('.module_preload');
+		this.module_preload.height(this.window.height());
 		
 		if(this.server) {
 			server.children().appendTo(this.element);
@@ -86,7 +89,7 @@ export default can.Control.extend({
 		this.module_preload.hide();
 		
 		if(this.server) {
-			$(window).trigger('custom_ready');
+			this.window.trigger('custom_ready');
 		}
 	},
 	
