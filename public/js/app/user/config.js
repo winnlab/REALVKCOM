@@ -11,9 +11,12 @@ System.config({
 		// 'googlemaps_main': 'js/plugins/google/googlemaps_main.js',
 		// 'youtube_iframe_api': 'js/plugins/youtube/iframe_api.js',
 		// 'moment': 'js/plugins/moment/moment.js',
+		'scroller': 'js/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+		'validate': 'js/plugins/validate/jquery.validate.js',
+		'notify': 'js/plugins/notify/jNotify.jquery.js',
+		
 		'router': 'js/app/user/router/router.js',
 		'placeholder': 'js/app/user/router/placeholder.js',
-		'scroller': 'js/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
 		
 		'core': 'js/app/user/core/core.js',
 		'core/*': 'js/app/user/core/*.js',
@@ -54,7 +57,8 @@ System.config({
 		},
 		'helpers': {
 			deps: [
-				'jade'
+				'jade',
+				'notify'
 			]
 		}
 	},

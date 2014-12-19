@@ -2,6 +2,7 @@
 @import '_normalize';
 @import '../dynamic/_dynamic';
 @import '../../../js/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
+@import '../../../js/plugins/notify/jNotify.jquery';
 
 @include font_face('Roboto', '/fonts/Roboto_Regular/Roboto_Regular');
 @include font_face('Roboto', '/fonts/Roboto_Medium/Roboto_Medium', 500);
@@ -34,13 +35,14 @@ body {
 }
 
 .modules {
-	overflow: hidden;
-	min-height: 690px;
+	
 }
 
 .module {
 	position: relative;
 	display: none;
+	overflow: hidden;
+	min-height: 690px;
 	
 	&.active {
 		display: block;
@@ -240,4 +242,18 @@ body {
 			background: url('/img/user/visa.png') no-repeat;
 		}
 	}
+}
+
+/* custom */
+
+.panel {
+	@include box_shadow(0 1px 2px 0 rgba(86, 124, 164, 0.15));
+	@include border_radius(2px);
+	width: 905px;
+	margin: 20px auto;
+	background-color: white;
+}
+
+.error {
+	font-size: 12px;
 }

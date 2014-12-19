@@ -6,12 +6,7 @@
 	background: url('/img/user/main/bg.png') no-repeat center bottom;
 	
 	.news_panel {
-		@include box_shadow(0 1px 2px 0 rgba(86, 124, 164, 0.15));
-		@include border_radius(2px);
-		width: 905px;
 		height: 640px;
-		margin: 20px auto;
-		background-color: white;
 	}
 	
 	.top_title {
@@ -30,6 +25,7 @@
 	.items_container {
 		height: 580px;
 		overflow: auto;
+		color: $darkbluetitle;
 	}
 	
 	.item {
@@ -37,7 +33,6 @@
 		@include box_shadow(2px 0 0 0 $lightblueshadow, 0 2px 0 0 $lightblueshadow);
 		width: 885px;
 		padding: 15px 25px 20px;
-		color: $darkbluetitle;
 		
 		&:not(:last-child) {
 			padding-bottom: 22px;

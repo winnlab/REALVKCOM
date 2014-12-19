@@ -25,4 +25,8 @@ Router.get '/faq', FAQ.index
 
 #
 
+Router.post '/send_question', FAQ.send
+
+#
+
 exports.Router = Router

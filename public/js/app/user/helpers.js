@@ -38,3 +38,23 @@ window.requestAnimFrame = (function() {
 			}, 1000 / 30);
 		};
 })();
+
+window.notify_param = {
+	autoHide: true,
+	TimeShown: 3000,
+	HorizontalPosition: 'left',
+	VerticalPosition: 'bottom',
+	ShowOverlay: false
+};
+
+window.show_success = function(message) {
+	jSuccess(message, window.notify_param);
+};
+
+window.show_error = function(message) {
+	if(typeof(message) == 'undefined') {
+		message = 'Произошла неизвестная ошибка'
+	}
+	
+	jError(message, window.notify_param);
+};
