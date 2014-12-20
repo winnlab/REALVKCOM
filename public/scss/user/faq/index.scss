@@ -75,8 +75,8 @@
 	
 	.inputs_container {
 		width: 540px;
-		float: right;
-		margin-right: 40px;
+		margin: 0 auto;
+		overflow: hidden;
 		
 		.left {
 			width: 160px;
@@ -109,7 +109,6 @@
 	}
 	
 	.send {
-		margin-right: 40px;
 		float: right;
 		clear: both;
 		margin-top: 20px;
