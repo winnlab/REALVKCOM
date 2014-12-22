@@ -33,6 +33,14 @@ var config = {
 					client: 'js/app/user/modules/faq/',
 					server: ':name'
 				}
+			},
+			
+			{
+				name: 'cabinet',
+				path: {
+					client: 'js/app/user/modules/cabinet/',
+					server: ':name'
+				}
 			}
 		],
 		defaultModule: 'main'

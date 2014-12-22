@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import '../dynamic/_dynamic';
+
+.module.cabinet {
+	background: url('/img/user/main/bg.png') no-repeat center bottom;
+	
+	.cabinet_panel {
+		height: 640px;
+	}
+	
+	.items_container {
+		font-size: 12px;
+		
+		.adorable_table {
+			width: 885px;
+		}
+		
+		.item {
+			padding: 0;
+			
+			.adorable_cell {
+				@include border_boxed;
+				padding: 10px 10px 10px 13px;
+				text-align: left;
+				
+				&:not(:last-child) {
+					@include box_shadow(inset -2px 0 0 0 $lightblueshadow);
+				}
+			}
+		}
+		
+		.cabinet_row {
+			display: table-row;
+		}
+		
+		.thead {
+			height: 40px;
+			font-weight: 500;
+		}
+		
+		.number {
+			width: 125px;
+		}
+		
+		.name {
+			width: 166px;
+		}
+		
+		.country {
+			width: 102px;
+		}
+		
+		.city {
+			width: 94px;
+		}
+		
+		.gender {
+			width: 63px;
+		}
+		
+		.age {
+			width: 87px;
+		}
+		
+		.quantity {
+			width: 80px;
+		}
+		
+		.price {
+			width: 89px;
+		}
+		
+		.status {
+			width: 79px;
+			
+			&.stopped {
+				background-color: $lightyellow;
+			}
+			
+			&.running {
+				background-color: $lightgreen;
+			}
+			
+			&.done {
+				
+			}
+		}
+	}
+}

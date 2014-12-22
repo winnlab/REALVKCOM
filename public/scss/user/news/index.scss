@@ -9,36 +9,6 @@
 		height: 640px;
 	}
 	
-	.top_title {
-		@include box_shadow(inset 0 -2px 0 0 $lightblueshadow, 0 1px 0 0 #f6f6f6);
-		height: 60px;
-		font-size: 20px;
-		text-transform: uppercase;
-		color: $orange;
-		font-weight: bold;
-		
-		.adorable_cell {
-			padding: 0 0 0 24px;
-		}
-	}
-	
-	.items_container {
-		height: 580px;
-		overflow: auto;
-		color: $darkbluetitle;
-	}
-	
-	.item {
-		@include border_boxed;
-		@include box_shadow(2px 0 0 0 $lightblueshadow, 0 2px 0 0 $lightblueshadow);
-		width: 885px;
-		padding: 15px 25px 20px;
-		
-		&:not(:last-child) {
-			padding-bottom: 22px;
-		}
-	}
-	
 	.top_label {
 		font-size: 16px;
 		text-decoration: underline;
