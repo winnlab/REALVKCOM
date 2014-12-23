@@ -25,13 +25,16 @@
 		@include box_shadow(0 2px 0 0 $lightblueshadow);
 		padding: 14px 57px 19px;
 		list-style: none;
+		height: auto;
 	}
 	
 	.item {
+		@include box_shadow(none);
 		@include my_inline_block;
 		margin: 8px 0;
 		position: relative;
 		width: 100%;
+		padding: 0;
 		
 		&:before {
 			@include pseudo;
