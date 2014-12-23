@@ -20,7 +20,20 @@ checkMigration = (migrate, callback) ->
 				Model.create migrate.data, -> do callback
 			else
 				async.each migrate.data, (data, next) ->
-					Model.findByIdAndUpdate data._id, data, upsert: true, next
+					options = {}
+					
+					keyField = '_id'
+					
+					if migrate.keyField
+						keyField = migrate.keyField
+					
+					options[keyField] = data[keyField]
+					
+					Model.findOne options, (err, doc) ->
+						if doc
+							return next null
+						
+						Model.findOneAndUpdate options, data, upsert: true, next
 				, callback
 	] , callback
 

@@ -5,6 +5,7 @@ OneScreen = require './user/onescreen'
 News = require './user/news'
 FAQ = require './user/faq'
 Cabinet = require './user/cabinet'
+Cost = require './user/cost'
 
 Router = express.Router()
 
@@ -27,6 +28,10 @@ Router.get '/news', News.index
 #
 
 Router.get '/faq', FAQ.index
+
+#
+
+Router.get '/cost', Cost.index
 
 #
 

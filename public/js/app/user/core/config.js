@@ -41,6 +41,14 @@ var config = {
 					client: 'js/app/user/modules/cabinet/',
 					server: ':name'
 				}
+			},
+			
+			{
+				name: 'cost',
+				path: {
+					client: 'js/app/user/modules/cost/',
+					server: ':name'
+				}
 			}
 		],
 		defaultModule: 'main'

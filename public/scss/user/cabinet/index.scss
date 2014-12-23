@@ -2,8 +2,6 @@
 @import '../dynamic/_dynamic';
 
 .module.cabinet {
-	background: url('/img/user/main/bg.png') no-repeat center bottom;
-	
 	.cabinet_panel {
 		height: 640px;
 	}
@@ -16,15 +14,19 @@
 		}
 		
 		.item {
+			@include box_shadow(none);
 			padding: 0;
 			
 			.adorable_cell {
+				@include box_shadow(inset 0 2px 0 0 $lightblueshadow, inset -2px 0 0 0 $lightblueshadow);
 				@include border_boxed;
 				padding: 10px 10px 10px 13px;
 				text-align: left;
-				
-				&:not(:last-child) {
-					@include box_shadow(inset -2px 0 0 0 $lightblueshadow);
+			}
+			
+			&:last-child {
+				.adorable_cell {
+					@include box_shadow(inset 0 2px 0 0 $lightblueshadow, inset 0 -2px 0 0 $lightblueshadow, inset -2px 0 0 0 $lightblueshadow);
 				}
 			}
 		}
@@ -72,17 +74,48 @@
 		
 		.status {
 			width: 79px;
+			position: relative;
 			
 			&.stopped {
 				background-color: $lightyellow;
+				
+				.status_inside {
+					&:before {
+						background-position: 0 0;
+					}
+				}
 			}
 			
 			&.running {
 				background-color: $lightgreen;
+				
+				.status_inside {
+					&:before {
+						background-position: -17px 0;
+					}
+				}
 			}
 			
 			&.done {
-				
+				.status_inside {
+					&:before {
+						background-position: -34px 0;
+					}
+				}
+			}
+		}
+		
+		.status_inside {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			
+			&:before {
+				@include pseudo;
+				@include absolute_centered;
+				width: 16px;
+				height: 16px;
+				background: url('/img/user/cabinet/status_icon.png') no-repeat;
 			}
 		}
 	}
